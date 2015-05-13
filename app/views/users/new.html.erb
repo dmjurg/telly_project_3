@@ -1,4 +1,6 @@
-<h2>Sign up</h2>
+<h2>Sign Up</h2>
+
+<p>Create an account to save your fave shows or browse your friends' shows:</p>
 
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
@@ -12,10 +14,10 @@
     </div>
   <% end %>
 
-  <!-- <div class="field">
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </div> -->
+  </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
@@ -28,7 +30,7 @@
     <%= f.label :password_confirmation, 'Confirm Password' %><br />
     <%= f.password_field :password_confirmation %>
   </div>
-
-  <%= f.submit 'Submit', id: 'submit' %>
-
+  <div class="actions">
+    <%= f.submit 'Submit', id: 'submit' %>
+  </div>
 <% end %>

@@ -5,7 +5,8 @@
 
   <title>tel.ly</title>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application' %>
+  <!-- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> -->
   <link href='http://fonts.googleapis.com/css?family=Delius' rel='stylesheet' type='text/css'>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -17,23 +18,26 @@
 
 <body>
 
+  <header>
   <h1>tel.ly</h1>
 
   <div class="nav_bar">
     <% if current_user %>
-      Logged in as <%= current_user.email %>
+      Logged in as <%= current_user.name %>
+      <%= link_to "My tel.ly Page", current_user %>
+      <%= link_to "Find Friends", users_path %>
       <%= link_to "Log Out", logout_path %>
     <% else %>
       <%= link_to "Sign Up", signup_path %> or
       <%= link_to "Log In", login_path %>
     <% end %>
-    <%= link_to "Home", root_path %>
   </div>
 
-  <div class="content">
+  </header>
+
+  <main>
     <%= yield %>
-  </div>
-
+  </main>
 </body>
 
 </html>

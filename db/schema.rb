@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150509225437) do
+ActiveRecord::Schema.define(version: 20150513200847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "seasons", force: :cascade do |t|
     t.integer "seasonnumber"
@@ -24,9 +31,8 @@ ActiveRecord::Schema.define(version: 20150509225437) do
   end
 
   create_table "shows", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "seasons"
-    t.text     "airdates"
+    t.string   "name"
+    t.text     "first_air_date"
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
