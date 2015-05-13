@@ -1,0 +1,19 @@
+body {
+  background-image: url("http://i.huffpost.com/gen/1300334/images/o-TELEVISION-facebook.jpg")
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Delius', cursive;
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.list {
+  text-decoration: none;
+  color: #fff;
+}
