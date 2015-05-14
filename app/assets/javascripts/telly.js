@@ -18,7 +18,8 @@ showButton.on("click", function(){
         };
       for(var i = 0; i < searchResults.length; i++){
         var showOption = searchResults[i]
-        $(".show_results").append($('<input type="button" value="Add to favorites" id="fave">')).append(showOption)
+        $(".show_results").append($('<input type="button" value="favorite!" id="fave">').on("click", Console)).append(showOption).append("</br>")
+
         }
     }).fail(function(){
       console.log("try again.  woof.")
@@ -26,10 +27,10 @@ showButton.on("click", function(){
 
 })
 
-$("#fave").on("click", function(){
-    console.log("FAVORITED.  BAM.")
-  })
-    
+function Console(){
+  $(".my_shows").append("show")
+}
+
 
 })
 
