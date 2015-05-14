@@ -16,6 +16,9 @@
 
 body {
   margin: 0;
+  background: #383838;
+  font-family: 'Signika', sans-serif;
+  font-size: 20px;
 }
 
 header {
@@ -24,32 +27,69 @@ header {
 }
 
 h1 {
-  color: pink;
   margin: 0;
+  color: #3399ff;
   font-size: 75px;
-  font-family: 'Delius', cursive;
+  font-family: 'Fredoka One', cursive;
+  padding: 10px;
+}
+
+h1 strong {
+  color: #ff6633;
+}
+
+ul {
+  margin: 0;
+  padding: 5px;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0 20px;
 }
 
 .nav_bar {
-  background: rgba(255, 255, 255, 0.7);
-  color: green;
+  background: rgba(255, 255, 255, 0.75);
+  color: #000;
   font-size: 20px;
+  font-family: 'Signika', sans-serif;
 }
 
-a {
-  color: orange;
+.nav_bar a {
+  color: #ff6633;
 }
 
-main {
-  background: #009999
+.user_list {
+  background: #000;
+  max-width: 50%;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.indiv {
+  margin: 20px;
+}
+
+.indiv a {
+  text-decoration: none;
 }
 
 h2 {
   color: #fff;
-  font-family: 'Delius', cursive;
-  font-weight: bold;
-  font-size: 50px;
-  margin: 0;
+  text-decoration: underline;
+  font-size: 40px;
+  padding-left: 20px;
+  margin: 15px 0 0 0;
+}
+
+.user a {
+  color: #3399ff;
+}
+
+#friend {
+  background: #ff6633;
+  color: #fff;
 }
 
 p {

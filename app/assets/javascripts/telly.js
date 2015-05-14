@@ -18,8 +18,9 @@ showButton.on("click", function(){
         };
       for(var i = 0; i < searchResults.length; i++){
         var showOption = searchResults[i]
-        $(".show_results").append($('<input type="button" value="favorite!" id="fave">').on("click", Console)).append(showOption).append("</br>")
-
+        var addFave = $('<input type="button" value="favorite!" id="fave">').on("click", Console)
+        var listObject = addFave.concat(showOption)
+        $(".show_results").append(listObject).append("</br>")
         }
     }).fail(function(){
       console.log("try again.  woof.")
