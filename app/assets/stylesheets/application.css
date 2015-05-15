@@ -77,7 +77,6 @@ ul li {
 
 h2 {
   color: #fff;
-  text-decoration: underline;
   font-size: 40px;
   padding-left: 20px;
   margin: 15px 0 0 0;
@@ -119,6 +118,11 @@ h2 {
   float: left;
 }
 
+.my_shows a {
+  text-decoration: none;
+  color: #000;
+}
+
 .my_friends {
   background: #ff6633;
   width: 40%;
@@ -127,6 +131,11 @@ h2 {
   padding: 10px;
   margin: 10px;
   color: #fff;
+}
+
+.friends a {
+  text-decoration: none;
+  color: #000;
 }
 
 .sign_up {
@@ -163,4 +172,28 @@ h2 {
 
 .log_in form {
   margin: 10px;
+}
+
+.show_info {
+  background: #000;
+  max-width: 83.5%;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+}
+
+.friend_fans {
+  background: #3399ff;
+  width: 40%;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+  float: left;
+}
+
+.friend_fans a {
+  text-decoration: none;
+  color: #000;
 }

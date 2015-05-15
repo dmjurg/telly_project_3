@@ -11,6 +11,17 @@
 
 </head>
 
+<header>
+
+  <ul class="splash_header">
+  <% if current_user %>
+    <li>Logged in as <%= current_user.name %></li>
+    <li><%= link_to "My tel.ly", current_user %></li>
+  <% end %>
+  </ul>
+  
+</header>
+
 <div class="splash">
 <body>
 

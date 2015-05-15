@@ -8,10 +8,29 @@ body {
   font-size: 30px;
 }
 
+.splash_header {
+  margin: 0;
+  padding: 0;
+}
+
+.splash_header li {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 20px;
+  font-family: 'Signika', sans-serif;
+}
+
+.splash_header a {
+  color: #fff;
+  text-decoration: none;
+  background: #ff6633;
+  padding: 5px;
+}
+
 .splash h1 {
   font-family: 'Fredoka One', cursive;
   position: absolute;
-  top: 325px;
+  top: 345px;
   left: 325px;
   width: 100%;
   color: #ff6633;
@@ -25,7 +44,7 @@ body {
 
 .splash_nav {
   position: absolute;
-  top: 590px;
+  top: 610px;
   left: 280px;
   color: #fff;
   font-size: 40px;

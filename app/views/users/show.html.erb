@@ -1,4 +1,4 @@
-<h2>Hi, <%= current_user.name %>!</h2>
+<h2><%= @user.name %>'s Page</h2>
 
 <div class="search_shows">
 
@@ -20,8 +20,8 @@
     <ul class="my_shows">
       <% for show in @user.shows %>
       <li>
-        <%= show.name %> (first aired: <%= show.first_air_date %>)
-        <%= link_to "Remove", unfavorite_show_path(show), :method => :post %>
+        <%= link_to show.name, show_path(show) %>
+        <%= link_to "(remove)", unfavorite_show_path(show), :method => :post %>
       </li>
       <% end %>
     </ul>
@@ -31,11 +31,12 @@
 <div class="my_friends">
 
   <h3>Friends</h3>
-  <ul>
+
+  <ul class="friends">
     <% for friendship in @user.friendships %>
       <li>
-        <%= friendship.friend.name %>
-        <%= link_to "Remove", friendship, :method => :delete %>
+        <%= link_to friendship.friend.name, user_path(friendship.friend) %>
+        <%= link_to "(remove)", friendship, :method => :delete %>
       </li>
     <% end %>
   </ul>
