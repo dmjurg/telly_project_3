@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513200847) do
+ActiveRecord::Schema.define(version: 20150515014406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,18 @@ ActiveRecord::Schema.define(version: 20150513200847) do
   create_table "shows", force: :cascade do |t|
     t.string   "name"
     t.text     "first_air_date"
-    t.integer  "rating"
+    t.integer  "api_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "shows_users", id: false, force: :cascade do |t|
+    t.integer "show_id", null: false
+    t.integer "user_id", null: false
+  end
+
+  add_index "shows_users", ["show_id"], name: "index_shows_users_on_show_id", using: :btree
+  add_index "shows_users", ["user_id"], name: "index_shows_users_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

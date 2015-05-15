@@ -1,26 +1,43 @@
 <h2>Hi, <%= current_user.name %>!</h2>
 
-<p>Use the below field to search for tv shows:</p>
-<form>
-  <input class="showSearch" type="text" placeholder="Search..." required>
-  <input class="showButton" type="button" value="Search">
-</form>
+<div class="search_shows">
 
-<div class="show_results"></div>
+  <p>Use the below field to search for tv shows:</p>
 
-<h3>Favorite Shows</h3>
+  <form>
+    <input class="showSearch" type="text" placeholder="Search..." required>
+    <input class="showButton" type="button" value="Search">
+  </form>
 
-<div class="my_shows"></div>
+  <div class="show_results"></div>
 
-<h3>Friends</h3>
-<ul>
-  <% for friendship in @user.friendships %>
-    <li>
-      <%= friendship.friend.name %>
-      <%= link_to "Remove", friendship, :method => :delete %>
-    </li>
-  <% end %>
-</ul>
+</div>
 
+<div class="favorite_shows">
 
-<!-- <%#= link_to friendship.friend.name, user_path(@users.find(params[:id])) %> -->
+  <h3>Favorite Shows</h3>
+
+    <ul class="my_shows">
+      <% for show in @user.shows %>
+      <li>
+        <%= show.name %> (first aired: <%= show.first_air_date %>)
+        <%= link_to "Remove", unfavorite_show_path(show), :method => :post %>
+      </li>
+      <% end %>
+    </ul>
+
+</div>
+
+<div class="my_friends">
+
+  <h3>Friends</h3>
+  <ul>
+    <% for friendship in @user.friendships %>
+      <li>
+        <%= friendship.friend.name %>
+        <%= link_to "Remove", friendship, :method => :delete %>
+      </li>
+    <% end %>
+  </ul>
+
+</div>

@@ -1,22 +1,55 @@
 /*body {
-  background-image: url("http://i.huffpost.com/gen/1300334/images/o-TELEVISION-facebook.jpg")
-}
+  background-image: url("https://d1hw6n3yxknhky.cloudfront.net/000335489_prevstill.jpeg")
+}*/
 
-h1 {
-  color: #fff;
-  font-family: 'Delius', cursive;
-  font-weight: bold;
-  font-size: 75px;
-}
-
-main {
+body {
+  background: #3399ff;
   color: #fff;
   font-size: 30px;
 }
 
-a {
-  text-decoration: none;
+.splash h1 {
+  font-family: 'Fredoka One', cursive;
+  position: absolute;
+  top: 325px;
+  left: 325px;
+  width: 100%;
+  color: #ff6633;
+  font-size: 100px;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.splash_nav {
+  position: absolute;
+  top: 590px;
+  left: 280px;
   color: #fff;
-  background: #ff00ff;
-  border: 2px solid #fff;
-}*/
+  font-size: 40px;
+  font-family: 'Signika', sans-serif;
+}
+
+.splash_nav a {
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Signika', sans-serif;
+  text-decoration: none;
+  background: #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.site_info {
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Signika', sans-serif;
+  text-align: center;
+  max-width: 900px;
+}
+
+.splash strong {
+  color: #ff6633;
+}

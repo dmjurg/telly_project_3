@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  background: url("http://d1hw6n3yxknhky.cloudfront.net/000335489_prevstill.jpeg");
+  background: url("https://d1hw6n3yxknhky.cloudfront.net/000335489_prevstill.jpeg");
   background-size: cover;
 }
 
@@ -92,6 +92,75 @@ h2 {
   color: #fff;
 }
 
-p {
-  margin: 8px 0;
+.search_shows {
+  background: #000;
+  max-width: 83.5%;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+}
+
+.search_shows p {
+  margin: 10px;
+}
+
+.search_shows form {
+  margin: 10px;
+}
+
+.favorite_shows {
+  background: #3399ff;
+  width: 40%;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+  float: left;
+}
+
+.my_friends {
+  background: #ff6633;
+  width: 40%;
+  float: left;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+}
+
+.sign_up {
+  background: #000;
+  width: 40%;
+  float: left;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+}
+
+.sign_up p {
+  margin: 10px;
+}
+
+.sign_up form {
+  margin: 10px;
+}
+
+.log_in {
+  background: #000;
+  width: 40%;
+  float: left;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+}
+
+.log_in p {
+  margin: 10px;
+}
+
+.log_in form {
+  margin: 10px;
 }

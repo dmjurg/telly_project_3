@@ -13,14 +13,9 @@ showButton.on("click", function(){
     }).done(function(response){
       var searchResults = [];
       for(var i = 0; i < response.results.length; i++){
-        var name = response.results[i].name
-          searchResults.push( name )
-        };
-      for(var i = 0; i < searchResults.length; i++){
-        var showOption = searchResults[i]
-        var addFave = $('<input type="button" value="favorite!" id="fave">').on("click", Console)
-        var listObject = addFave.concat(showOption)
-        $(".show_results").append(listObject).append("</br>")
+        var show = response.results[i]
+        var addFave = $('<input type="button" data-api-id="' + show.id + '" data-name="' + show.name + '" data-date="' + show.first_air_date + '" value="favorite!">').on("click", favoriteShow );
+        $(".show_results").append(addFave).append(show.name).append("</br>")
         }
     }).fail(function(){
       console.log("try again.  woof.")
@@ -28,8 +23,23 @@ showButton.on("click", function(){
 
 })
 
-function Console(){
-  $(".my_shows").append("show")
+function favoriteShow(){
+
+  console.log($(this).data())
+  var showData = $(this).data()
+  // console.log(show);
+  $.ajax({
+    type: "post",
+    url: "/shows/favorite",
+    data: {show: showData}
+  }).done(function(response){
+    var showName = response.name
+    var showDate = response.first_air_date
+    $(".my_shows").append("<li>" + showName + "(first aired: " + showDate + ")" + "</li>")
+    console.log(response)
+  }).fail(function(){
+    console.log("nope")
+  })
 }
 
 

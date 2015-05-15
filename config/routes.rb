@@ -6,9 +6,12 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
     #chaging user state but no perm damage
-    
+
   resources :users
-  resources :shows
+  resources :shows do
+    post 'favorite', on: :collection
+    post 'unfavorite', on: :member
+  end
   resources :seasons
   resources :friendships
   resources :sessions
