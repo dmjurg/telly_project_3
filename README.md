@@ -17,4 +17,4 @@ As a user, I want to be able to:
 - View friends' current/past/to-watch shows
 - Find/sort by friends who have seen a specific show
 
-api plan: epguides.frecar.no/show/  
+api: https://www.themoviedb.org/documentation/api
