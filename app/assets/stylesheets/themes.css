@@ -3,7 +3,6 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 20px;
 }
-
 header {
   background: url("https://d1hw6n3yxknhky.cloudfront.net/000335489_prevstill.jpeg");
   background-size: cover;
@@ -18,11 +17,6 @@ h1 {
 h1 strong {
   color: rgba(255, 153, 102, 1);
 }
-
-ul {}
-
-ul li {}
-
 .nav_bar {
   background: rgba(230, 230, 230, .75);
   color: rgba(26, 26, 26, 1);
@@ -89,11 +83,6 @@ h2 {
   background: rgba(255, 153, 102, 1);
   color: rgba(26, 26, 26, 1);
 }
-
-.sign_up p {}
-
-.sign_up form {}
-
 .log_in {
   background: rgba(26, 26, 26, 1);
   color: rgba(230, 230, 230, 1);
@@ -105,11 +94,11 @@ h2 {
 }
 
 .friend_fans {
-  background: #3399ff;
+  background: rgba(255, 153, 102, 1);
   color: rgba(230, 230, 230, 1);
 }
 
 .friend_fans a {
   text-decoration: none;
-  color: #000;
+  color: rgba(230, 230, 230, 1);
 }
