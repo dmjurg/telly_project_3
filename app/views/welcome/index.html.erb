@@ -2,42 +2,33 @@
 <html>
 
 <head>
-
   <title>tel.ly</title>
-
   <link href='https://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'splash' %>
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
-
 </head>
 
 <body>
-
-  <header>
-  <h1>tel<strong>.ly</strong></h1>
-
-  <div class="nav_bar">
-    <ul>
+  <div class="splash_head">
+    <ul class="splash_header">
     <% if current_user %>
       <li>Logged in as <%= current_user.name %></li>
       <li><%= link_to "My tel.ly", current_user %></li>
-      <li><%= link_to "Find Friends", users_path %></li>
-      <li><%= link_to "Log Out", logout_path %></li>
-    <% else %>
-      <li><%= link_to "Sign Up", signup_path %></li> or
-      <li><%= link_to "Log In", login_path %></li>
     <% end %>
-      <li><%= link_to "Home", root_path %></li>
+    </ul>
   </div>
 
-  </header>
+  <h1>tel.ly</h1>
+  
+  <div class="splash_nav">
+    <%= link_to "Sign Up", signup_path %> or
+    <%= link_to "Log In", login_path %>
+  </div>
 
-  <main>
-    <%= yield %>
-  </main>
+  <div class="site_info">
+    <p>tel<strong>.ly</strong> helps you stay on top of what television shows you and your friends are into!</p>
+  </div>
 </body>
-
 </html>

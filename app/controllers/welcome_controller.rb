@@ -1,7 +1,5 @@
 class WelcomeController < ApplicationController
-
   def index
-    render 'welcome.html.erb'
+    render :index, layout: false
   end
-
 end
