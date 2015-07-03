@@ -15,6 +15,8 @@ class ShowsController < ApplicationController
       @show.name = params[:show][:name]
       @show.api_id = params[:show][:apiId]
       @show.first_air_date = params[:show][:date]
+      @show.overview = params[:show][:overview]
+      @show.image = params[:show][:image]
       @show.save
     end
     current_user.shows << @show
