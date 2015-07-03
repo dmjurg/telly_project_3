@@ -11,6 +11,7 @@ showButton.on("click", function(){
       type: "get",
       dataType: "json"
     }).done(function(response){
+      $(".show_results").empty();
       var searchResults = [];
       for(var i = 0; i < response.results.length; i++){
         var show = response.results[i]
