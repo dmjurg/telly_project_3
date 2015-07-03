@@ -58,4 +58,8 @@ h1 {
   .or {
     display: block;
   }
+  .splash_header {
+    margin: 0;
+    font-size: 80px;
+  }
 }

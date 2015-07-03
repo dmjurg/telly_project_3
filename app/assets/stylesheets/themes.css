@@ -1,103 +1,63 @@
 body {
   background: rgba(112, 184, 255, .75);
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
 }
 header {
   background: url("https://d1hw6n3yxknhky.cloudfront.net/000335489_prevstill.jpeg");
   background-size: cover;
 }
-
 h1 {
   color: rgba(112, 184, 255, 1);
-  font-size: 75px;
   font-family: 'Squada One', cursive;
 }
-
-h1 strong {
+h1 strong, #friend {
   color: rgba(255, 153, 102, 1);
 }
 .nav_bar {
   background: rgba(230, 230, 230, .75);
   color: rgba(26, 26, 26, 1);
-  font-size: 20px;
   font-family: 'Roboto Condensed', sans-serif;
 }
-
 .nav_bar a {
   color: rgba(26, 26, 26, 1);
   text-decoration: none;
 }
-
 .user_list {
   background: rgba(26, 26, 26, 1);
 }
 .user a {
   color: rgba(112, 184, 255, 1);
 }
-#friend {
-  color: rgba(255, 153, 102, 1);
-}
-
-.indiv {}
-
 .indiv a {
   text-decoration: none;
 }
-
 h2 {
   color: rgba(230, 230, 230, 1);
-  font-size: 40px;
 }
-
-.search_shows {
+.search_shows, .log_in, .show_info {
   background: rgba(26, 26, 26, 1);
   color: rgba(230, 230, 230, 1);
 }
-
-.search_shows p {}
-
-.search_shows form {}
-
 .favorite_shows {
   background: rgba(230, 230, 230, 1);
   color: rgba(26, 26, 26, 1);
 }
-
 .my_shows a {
   text-decoration: none;
   color: rgba(26, 26, 26, 1);
 }
-
-.my_friends {
+.my_friends, .sign_up {
   background: rgba(255, 153, 102, 1);
   color: rgba(26, 26, 26, 1);
 }
-
 .friends a {
   text-decoration: none;
   color: rgba(26, 26, 26, 1);
 }
-
-.sign_up {
-  background: rgba(255, 153, 102, 1);
-  color: rgba(26, 26, 26, 1);
-}
-.log_in {
-  background: rgba(26, 26, 26, 1);
-  color: rgba(230, 230, 230, 1);
-}
-
-.show_info {
-  background: rgba(26, 26, 26, 1);
-  color: rgba(230, 230, 230, 1);
-}
-
 .friend_fans {
   background: rgba(255, 153, 102, 1);
   color: rgba(230, 230, 230, 1);
 }
-
 .friend_fans a {
   text-decoration: none;
   color: rgba(230, 230, 230, 1);
