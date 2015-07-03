@@ -1,5 +1,5 @@
 @media only screen and (max-device-width: 480px) {
-/*body {
+body {
   margin: 0;
 }
 h1 {
@@ -89,6 +89,6 @@ h2 {
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
-  float: left;*/
-}
+  float: left;
+
 }

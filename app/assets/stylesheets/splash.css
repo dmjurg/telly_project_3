@@ -1,26 +1,27 @@
 body {
   background: rgba(112, 184, 255, .75);
   color: rgba(230, 230, 230, 1);
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
 }
 h1 {
   color: rgba(255, 153, 102, 1);
-  font-size: 100px;
+  font-size: 150px;
   font-family: 'Squada One', cursive;
   margin: auto;
-  width: 200px;
+  width: 300px;
 }
 .site_info {
   width: 50%;
   margin: auto;
+  text-align: center;
 }
 .site_info strong {
   color: rgba(255, 153, 102, 1);
 }
 .splash_nav {
-  width: 225px;
+  width: 300px;
   margin: 20px auto;
 }
 .splash_nav a {
@@ -35,4 +36,26 @@ h1 {
 }
 .splash_header a {
   text-decoration: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+  h1 {
+    font-size: 300px;
+    width: 600px;
+  }
+  body {
+    font-size: 100px;
+  }
+  .site_info {
+    width: 80%;
+    text-align: center;
+  }
+  .splash_nav {
+    width: 350px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .or {
+    display: block;
+  }
 }
