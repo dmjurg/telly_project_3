@@ -16,7 +16,7 @@ showButton.on("click", function(){
       for(var i = 0; i < response.results.length; i++){
         var show = response.results[i]
         var addFave = $('<input type="button" data-api-id="' + show.id + '" data-name="' + show.name + '" data-date="' + show.first_air_date + '" data-overview="' + show.overview + '" data-image="' + show.poster_path + '" value="favorite!">').on("click", favoriteShow );
-        $(".show_results").append(addFave).append(show.name).append("</br>")
+        $(".show_results").append(addFave).append(show.name).append(" (First aired: " + show.first_air_date + ")").append("</br>")
         }
     }).fail(function(){
       console.log("try again.  woof.")
@@ -36,7 +36,7 @@ function favoriteShow(){
   }).done(function(response){
     var showName = response.name
     var showDate = response.first_air_date
-    $(".my_shows").append("<li>" + showName + "(first aired: " + showDate + ")" + "</li>")
+    $(".my_shows").append("<li>" + showName + "</li>")
     console.log(response)
   }).fail(function(){
     console.log("nope")

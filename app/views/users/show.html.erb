@@ -1,5 +1,6 @@
 <h2><%= @user.name %>'s Page</h2>
 
+<% if @user === current_user %>
 <div class="search_shows">
 
   <p>Use the below field to search for tv shows:</p>
@@ -12,6 +13,7 @@
   <div class="show_results"></div>
 
 </div>
+<% end %>
 
 <div class="favorite_shows">
 
@@ -21,7 +23,9 @@
       <% for show in @user.shows %>
       <li>
         <%= link_to show.name, show_path(show) %>
-        <%= link_to "(remove)", unfavorite_show_path(show), :method => :post %>
+        <% if @user === current_user %>
+          <%= link_to "(remove)", unfavorite_show_path(show), :method => :post %>
+        <% end %>
       </li>
       <% end %>
     </ul>
@@ -36,7 +40,9 @@
     <% for friendship in @user.friendships %>
       <li>
         <%= link_to friendship.friend.name, user_path(friendship.friend) %>
-        <%= link_to "(remove)", friendship, :method => :delete %>
+        <% if @user === current_user %>
+          <%= link_to "(remove)", friendship, :method => :delete %>
+        <% end %>  
       </li>
     <% end %>
   </ul>
