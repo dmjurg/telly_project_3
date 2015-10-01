@@ -34,7 +34,6 @@ h2 {
 }
 .search_shows, .show_info {
   width: 83.5%;
-  border-radius: 15px;
   padding: 10px;
   margin: 10px;
 }
@@ -43,7 +42,6 @@ h2 {
 }
 .favorite_shows, .my_friends, .sign_up, .log_in, .friend_fans {
   width: 40%;
-  border-radius: 15px;
   padding: 10px;
   margin: 10px;
   float: left;

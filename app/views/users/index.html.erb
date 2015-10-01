@@ -9,7 +9,7 @@
       <% else %>
         <div class="indiv">
           <%= link_to user.name, user_path(user) %>
-          <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post, :id => "friend" %>
+          <%= link_to "add friend", friendships_path(:friend_id => user), :method => :post, :id => "friend" %>
         </div>
       <% end %>
     </div>

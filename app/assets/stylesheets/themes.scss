@@ -12,7 +12,6 @@ h1 {
 }
 h1 strong {
   color: rgb(43, 43, 209);
-
 }
 .nav_bar {
   background: rgba(230, 238, 245, .75);
@@ -26,35 +25,34 @@ h1 strong {
 .nav_bar a:hover {
   color: rgb(46, 46, 46);
 }
-.user a {
-  color: rgb(43, 43, 209);
+#friend {
+ color: rgb(230, 238, 245);
+ background: rgb(255, 153, 102);
+ font-family: 'Montserrat', sans-serif;
+ font-size: 16px;
 }
 .indiv a {
   text-decoration: none;
-  color: rgb(255, 153, 102);
+  color: rgb(43, 43, 209);
 }
 h2 {
   color: rgb(46, 46, 46);
 }
 .search_shows, .log_in, .show_info {
-  background: rgb(46, 46, 46);
+  background: rgb(43, 43, 209);
   color: rgb(230, 238, 245);
 }
 .favorite_shows {
-  background: rgba(230, 230, 230, 1);
-  color: rgba(26, 26, 26, 1);
+  background: rgb(46, 46, 46);
+  color: rgb(230, 238, 245);
 }
-.my_shows a {
+.my_shows a, .friends a {
   text-decoration: none;
-  color: rgba(26, 26, 26, 1);
+  color: rgb(230, 238, 245);
 }
 .my_friends, .sign_up {
   background: rgb(255, 153, 102);
-  color: rgb(46, 46, 46);
-}
-.friends a {
-  text-decoration: none;
-  color: rgba(26, 26, 26, 1);
+  color: rgb(230, 238, 245);
 }
 .friend_fans {
   background: rgba(255, 153, 102, 1);
