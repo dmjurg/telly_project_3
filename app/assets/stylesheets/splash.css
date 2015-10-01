@@ -1,35 +1,42 @@
 body {
-  background: rgb(157, 178, 178);
-  color: rgba(230, 230, 230, 1);
-  font-size: 40px;
-  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(230, 238, 245);
+  background: rgb(255, 153, 102);
+  font-family: 'Domine', serif;
   margin: 0;
 }
-h1 {
-  color: rgba(255, 153, 102, 1);
-  font-size: 150px;
-  font-family: 'Squada One', cursive;
+.splash_logo {
+  width: 600px;
+  border: 2px solid;
   margin: auto;
-  width: 300px;
 }
-.site_info {
-  width: 50%;
-  margin: auto;
+h1 {
+  color: rgb(230, 238, 245);
+  font-size: 160px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+h1 strong {
+  color: rgb(43, 43, 209);
+}
+.site_info p {
+  font-size: 22px;
   text-align: center;
 }
-.site_info strong {
-  color: rgba(255, 153, 102, 1);
-}
 .splash_nav {
-  width: 300px;
-  margin: 20px auto;
+  width: 220px;
+  margin: auto;
+  font-size: 25px;
 }
-.splash_nav a {
+.splash_nav a, .splash_nav {
   text-decoration: none;
-  padding: 5px;
-  color: rgba(230, 230, 230, 1);
-  background: rgba(26, 26, 26, 1);
-  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(46, 46, 46);
+  text-align: center;
+}
+.splash_nav a:hover {
+  color: rgb(43, 43, 209);
 }
 .splash_header li {
   list-style-type: none;

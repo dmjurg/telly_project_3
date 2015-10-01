@@ -3,8 +3,8 @@
 
 <head>
   <title>tel.ly</title>
-  <link href='https://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag 'splash' %>
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
@@ -13,22 +13,28 @@
 <body>
   <div class="splash_head">
     <ul class="splash_header">
-    <% if current_user %>
-      <li>Logged in as <%= current_user.name %></li>
-      <li><%= link_to "My tel.ly", current_user %></li>
-    <% end %>
+
     </ul>
   </div>
 
-  <h1>tel.ly</h1>
+  <div class = "splash_info">
+    <div class = "splash_logo">
+      <h1>tel<strong>.ly</strong></h1>
+    </div>
 
-  <div class="splash_nav">
-    <%= link_to "Sign Up", signup_path %> <span class="or">or</span>
-    <%= link_to "Log In", login_path %>
+    <div class="site_info">
+      <p>track your favorite tv shows and compare with friends</p>
+    </div>
+    <div class="splash_nav">
+      <% if current_user %>
+        logged in as <%= current_user.name %>
+        <%= link_to "my tel.ly", current_user %>
+      <% else %>
+        <%= link_to "Sign Up", signup_path %> |
+        <%= link_to "Log In", login_path %>
+      <% end %>
+    </div>
   </div>
 
-  <div class="site_info">
-    <p>tel<strong>.ly</strong> helps you stay on top of what television shows you and your friends are into!</p>
-  </div>
 </body>
 </html>
