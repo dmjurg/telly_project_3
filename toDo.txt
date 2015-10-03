@@ -1,0 +1,11 @@
+- don't let users favorite a show twice
+- better way to identify shows in initial list
+- add seasons
+- customize buttons
+  - search
+  - new users
+  - log in
+  - remove friends and shows
+- clean up find friends page
+- add search function to find friends page
+- hide api key

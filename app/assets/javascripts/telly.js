@@ -36,7 +36,7 @@ function favoriteShow(){
   }).done(function(response){
     var showName = response.name
     var showDate = response.first_air_date
-    $(".my_shows").append("<li>" + showName + "</li>")
+    $(".my_shows").append("<li> <a href='/shows/" + response.id + "'>" + showName + "</a>" + "<a href='/shows/" + response.id + "/unfavorite' data-method='post'> (remove)</a></li>")
     console.log(response)
   }).fail(function(){
     console.log("nope")
