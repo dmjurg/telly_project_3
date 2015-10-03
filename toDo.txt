@@ -1,4 +1,3 @@
-- don't let users favorite a show twice
 - better way to identify shows in initial list
 - add seasons
 - customize buttons

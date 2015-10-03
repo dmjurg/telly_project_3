@@ -34,10 +34,14 @@ function favoriteShow(){
     url: "/shows/favorite",
     data: {show: showData}
   }).done(function(response){
-    var showName = response.name
-    var showDate = response.first_air_date
-    $(".my_shows").append("<li> <a href='/shows/" + response.id + "'>" + showName + "</a>" + "<a href='/shows/" + response.id + "/unfavorite' data-method='post'> (remove)</a></li>")
-    console.log(response)
+    if (response.message) {
+      searchForm.append(response.message);
+    } else {
+      var showName = response.name
+      var showDate = response.first_air_date
+      $(".my_shows").append("<li> <a href='/shows/" + response.id + "'>" + showName + "</a>" + "<a href='/shows/" + response.id + "/unfavorite' data-method='post'> (remove)</a></li>")
+      console.log(response)
+    }
   }).fail(function(){
     console.log("nope")
   })

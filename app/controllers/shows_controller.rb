@@ -19,8 +19,11 @@ class ShowsController < ApplicationController
       @show.image = params[:show][:image]
       @show.save
     end
-    current_user.shows << @show
-    render json: @show
+    if current_user.add_favorite(@show)
+      render json: @show
+    else
+      render json: { message: "You've already added that show!"}
+    end
   end
 
   def unfavorite
