@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-var showSearch = $(".showSearch")
-var showButton = $(".showButton")
+var searchForm = $("#show-search")
 var url = "https://api.themoviedb.org/3/search/tv?api_key=059d376b9f7dcd72de6672af1113fcf1&query="
 
-showButton.on("click", function(){
-  var searchString = showSearch.val().split(" ").join("+");
+searchForm.on("submit", function(){
+  event.preventDefault();
+  var searchString = $(this).find('.search-term').val().split(" ").join("+");
     $.ajax({
       url: url + searchString,
       type: "get",

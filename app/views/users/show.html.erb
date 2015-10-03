@@ -5,9 +5,9 @@
 
   <p>Use the below field to search for tv shows:</p>
 
-  <form>
-    <input class="showSearch" type="text" placeholder="Search..." required>
-    <input class="showButton" type="button" value="Search">
+  <form id="show-search">
+    <input class="search-term" type="text" placeholder="Search..." required>
+    <input class="search-button" type="submit" value="Search">
   </form>
 
   <div class="show_results"></div>
@@ -42,7 +42,7 @@
         <%= link_to friendship.friend.name, user_path(friendship.friend) %>
         <% if @user === current_user %>
           <%= link_to "(remove)", friendship, :method => :delete %>
-        <% end %>  
+        <% end %>
       </li>
     <% end %>
   </ul>
